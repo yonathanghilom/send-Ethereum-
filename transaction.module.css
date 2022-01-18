@@ -1,0 +1,22 @@
+.ul {
+    counter-reset: item;
+    height : auto;
+    overflow : hidden;
+  }
+  
+  .li {
+    float : left;
+    width : 150px;
+    height: 150px;
+    margin: 0 0 10px 10px;
+    background : #1a1818;
+    counter-increment: item   
+  }
+  
+  .ul li:nth-child(5n + 1) {
+    clear : left;
+  }
+  
+  .li:before {
+    content : counter(item);
+  }
